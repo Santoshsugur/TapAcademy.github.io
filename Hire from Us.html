@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .htt{
+            display: flex;
+            justify-content: space-between;
+            font-family: "Montserrat", sans-serif;
+            background-color:rgb(6, 133, 184);
+        }
+        .htt .left h2{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 80px;
+            padding-left: 40px;
+        }
+        .htt hr{
+            margin-left: 20px;
+        }
+
+
+        .htt .left h4{
+            font-size: 15px;
+            color: white;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+        .htt .left ul{
+            padding: 0;
+            margin: 0;
+        }
+        .htt .left ul li{
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-left: 20px;
+            list-style: none;
+        }
+        .htt .left button{
+            background-color: white;
+            color: rgb(6, 133, 184);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 30px;
+            transition: background-color 0.3s ease;
+            margin: 30px;
+        }
+
+
+        .htt .right{
+            background-color: #FFFFFF; 
+            padding: 30px;
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            width: 500px; 
+            margin: 50px auto;
+        }
+        .htt .right form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .htt .right fieldset{
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .htt .right label{
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        
+
+        .htt .right input[type="button"] {
+            background-color: #4CAF50; 
+            color: #FFFFFF; 
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        
+        .htt .right input[type="button"]:hover {
+            background-color: #3e8e41;
+        }
+
+        .htt .right input{
+            margin-top: 20px;
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="htt">
+        <div class="left">
+            <h2>Hire Trained Talents</h2>
+            <h4>Discover top-tier candidates who are ready to contribute to your team</h4>
+            <hr>
+            <ul>
+                <li>Skilled in Full Stack Web Development and DSA.</li>
+                <li>iconHands-On Experience with real-world projects.</li>
+                <li>iconIndustry-Relevant Skills in current technologies and best practices.</li>
+                <li>Efficient Onboarding</li>
+            </ul>
+            <button> Take a placement Call</button>
+        </div>
+
+
+        <div class="right">
+            <form action="">
+                <fieldset>
+                    <label for="name">Name:</label>
+                    <input type="text" required placeholder="name"><br><br>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" required placeholder="example@gmail.com"><br><br>
+    
+                    <label for="phone">PhoneNumber:</label>
+                    <input type="tel" required placeholder="+91"><br><br>
+    
+                    <label for="Desi">Designation:</label>
+                    <input type="text" required placeholder="Software Engineer"><br><br>
+    
+                    <label for="noofhire">No.OfHires:</label>
+                    <input type="text" placeholder="Enter the digit here"><br>
+    
+                    <input type="button" value="submit">
+    
+                </fieldset>
+            </form>
+
+        </div>
+
+
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TapAcademy</title>
+    <link rel="icon" type="image/x-icon" href="company-logo.1ee5784c.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgba(14, 40, 73, 255);
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+        margin-left: 100px;
+      }
+      .headertop {
+        display: flex;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
+      .header-wrapper {
+        padding-top: 80px;
+      }
+
+      .ullist {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 50px;
+        justify-content: space-around;
+        gap: 50px;
+      }
+      .ullist li {
+        text-align: end;
+      }
+      .ullist li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: gray;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      .ullist li a:hover{
+        color:rgb(70, 70, 70);
+      }
+
+      .ullist li ul{
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+
+      }
+      .ullist li:hover ul{
+        display: block;
+      }
+
+      .ullist li ul li{
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .ullist li ul li a{
+        display: block;
+        padding: 12px 16px;
+        text-decoration: none;
+      }
+      .ullist li ul li a:hover{
+        background-color: #ddd;
+        color: black;
+      }
+
+      .arrow {
+        border: solid gray;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+      }
+      
+      .arrow.right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+      
+      .arrow.left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+      
+      .arrow.up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+      }
+      
+      .arrow.down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+
+      
+      .headerkelagade {
+        color: white;
+        display: flex;
+        justify-content: space-around;
+      }
+      .leftside {
+        margin: auto;
+      }
+      .leftside h1 {
+        font-size: 75px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-weight: 700;
+        font-style: normal;
+        margin-left: 50px;
+      }
+      .leftside h2 {
+        margin-top: 20px;
+        font-size: 25px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-weight: 700;
+        font-style: normal;
+        margin-left: 50px;
+        background-color: aliceblue;
+        color: rgb(11, 11, 44);
+        border-radius: 20px;
+        padding-left: 20px;
+      }
+      .leftside h2 .gl {
+        background-color: skyblue;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+        font-style: normal;
+      }
+      .leftside p {
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        margin-left: 50px;
+      }
+      .leftside .button1 {
+        text-decoration: none;
+        margin-top: 25px;
+        background-color: rgb(65, 182, 228);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 10px;
+        margin-left: 50px;
+      }
+      .leftside .button2 {
+        text-decoration: none;
+        margin-top: 25px;
+        background-color: aliceblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+
+      .leftside .button1 a {
+        text-decoration: none;
+        color: white;
+      }
+      .leftside .button2 a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .rightside img {
+        width: 450px;
+        margin-top: 50px;
+        margin-right: 50px;
+        border-radius: 50%;
+      }
+
+      .placedin h1 {
+        font-family: "Montserrat", sans-serif;
+        color: aliceblue;
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 30px;
+      }
+      .placedin marquee img {
+        height: 100px;
+        width: 150px;
+        border-radius: 10px;
+      }
+
+      .recognized {
+        background-color: aliceblue;
+        margin-top: 50px;
+      }
+      .recognized h1 {
+        color: grey;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .recognized img {
+        align-items: center;
+        margin-left: 150px;
+        height: 100px;
+        width: 150px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .whychoosetop {
+        background-color: rgb(7, 122, 168);
+      }
+      .whychoosetop h1 {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 20px;
+        padding-top: 100px;
+      }
+
+      .whychoose {
+        display: flex;
+        flex-direction: row;
+        padding: 100px;
+        font-family: "Montserrat", sans-serif;
+        gap: 20px;
+      }
+
+      .whychoose h1 {
+        color: rgb(13, 115, 155);
+        margin-top: 0;
+      }
+
+      .whychoose .left {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+      }
+
+      .whychoose .left img {
+        width: 100px;
+        height: 70px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 90px;
+      }
+
+      .whychoose .middle {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+      }
+      .whychoose .middle img {
+        width: 100px;
+        height: 70px;
+        border-radius: 10px;
+        margin-left: 30%;
+      }
+
+      .whychoose .right {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+      }
+      .whychoose .right img {
+        width: 100px;
+        height: 70px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+
+      .ourcp {
+        background-color: rgb(243, 243, 243);
+      }
+      .ourcp h1 {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 20px;
+        padding-top: 100px;
+      }
+      .ourcp h4 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        text-align: center;
+      }
+      .insideourcp {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 50px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .ourcp .insideourcp .left {
+        background-color: rgb(206, 231, 229);
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .left img {
+        border-radius: 10px;
+      }
+
+      .ourcp .insideourcp .left .btn1 {
+        margin-top: 10px;
+        margin-left: 50px;
+        background-color: skyblue;
+        padding: 10px 20px;
+        color: rgb(15, 27, 61);
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+        text-align: center;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .left .btn2 {
+        margin-top: 10px;
+        margin-left: 40px;
+        background-color: skyblue;
+        padding: 10px 20px;
+        color: rgb(15, 27, 61);
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .left .btn1 a {
+        text-decoration: none;
+      }
+      .ourcp .insideourcp .left .btn2 a {
+        text-decoration: none;
+      }
+
+      .ourcp .insideourcp .right {
+        background-color: rgb(206, 231, 229);
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .right img {
+        border-radius: 10px;
+      }
+      .ourcp .insideourcp .right h1 {
+        margin-top: 0px;
+        font-size: x-large;
+      }
+      .ourcp .insideourcp .right .btn1 {
+        margin-top: 10px;
+        margin-left: 50px;
+        background-color: skyblue;
+        padding: 10px 20px;
+        color: rgb(15, 27, 61);
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+        text-align: center;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .right .btn2 {
+        margin-top: 10px;
+        margin-left: 40px;
+        background-color: skyblue;
+        padding: 10px 20px;
+        color: rgb(15, 27, 61);
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+        border-radius: 20px;
+      }
+      .ourcp .insideourcp .right .btn1 a {
+        text-decoration: none;
+      }
+      .ourcp .insideourcp .right .btn2 a {
+        text-decoration: none;
+      }
+
+      .placedstudents {
+        background-color: rgb(225, 231, 231);
+      }
+      .placedstudents h1 {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 20px;
+        padding-top: 100px;
+      }
+      .placedstudents p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20spx;
+        text-align: center;
+      }
+
+      .insideplacedstudents {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 50px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .foot {
+        display: flex;
+        gap: 50px;
+      }
+      .foot .left .logo {
+        margin: 20px;
+      }
+      .foot .left p {
+        font-family: "Montserrat", sans-serif;
+        color: grey;
+      }
+
+      .foot .middle ul {
+        margin-top: 50px;
+        list-style: none;
+      }
+      .foot .middle ul li a {
+        text-decoration: none;
+        list-style: none;
+        color: grey;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+      }
+      .foot .middle ul h3 {
+        color: rgb(218, 209, 209);
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+      }
+
+      .foot .middle ul li:hover {
+        background-color: rgb(206, 231, 229);
+        color: black;
+      }
+
+      .foot .right ul {
+        margin-top: 50px;
+        list-style: none;
+        text-decoration: none;
+      }
+      .foot .right ul li a {
+        text-decoration: none;
+        list-style: none;
+        color: grey;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+      }
+      .foot .right ul h3 {
+        color: rgb(218, 209, 209);
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+      }
+
+      .underfoot {
+        display: flex;
+        gap: 350px;
+      }
+
+      .underfoot .left {
+        text-align: start;
+        font-family: "Montserrat", sans-serif;
+        color: grey;
+        margin: 30px;
+        text-align: start;
+      }
+      .underfoot .right a {
+        text-decoration: none;
+        color: grey;
+      }
+      .underfoot .right {
+        font-family: "Montserrat", sans-serif;
+        margin: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="headertop">
+      <a href="#"><img src="company-logo.1ee5784c.svg" alt="TapAcademy" class="logo" /></a>
+      <ul class="ullist">
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="courses.html">Courses <i class="arrow down"></i></a>
+          <ul id="dropdown">
+            <li><a href="">Full Stack Web Development</a></li>
+            <li><a href="">Data Structures and Algorithms</a></li>
+          </ul>
+        </li>
+        <li><a href="StudentReviews.html">Student Reviews</a></li>
+        <li><a href="Hire from Us.html">Hire from Us</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </header>
+
+    <div class="header-wrapper">
+      <div class="headerkelagade">
+        <div class="leftside">
+          <h1>TAP ACADEMY</h1>
+          <h2>
+            <span class="gl">Gamify Learning</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;Simplify Employment
+          </h2>
+          <p>
+            The Best Institute For Java Full Stack Developer Courses <br />Trusted
+            by over 75,000+ students across India
+          </p>
+          <button class="button1">
+            <a href="Attend free Demo.html">Attend free Demo ->></a>
+          </button>
+          <button class="button2">
+            <a href="courses.html">Explore Placement Opputunity</a>
+          </button>
+        </div>
+        <div class="rightside">
+          <img
+            src="73266d40-ec2f-40b8-b273-17a904db1969.avif"
+            alt=""
+            class="developerimg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="placedin">
+      <h1>Our Students Got Hired From</h1>
+      <marquee behavior="" direction="right"
+        >&nbsp;&nbsp;<img src="1.jpeg" />&nbsp;&nbsp;<img
+          src="2.jpeg"
+          alt="" />&nbsp;&nbsp;<img src="3.jpeg" alt="" />&nbsp;&nbsp;<img
+          src="4.png"
+          alt="" />&nbsp;&nbsp;<img src="5.png" alt="" />&nbsp;&nbsp;<img
+          src="6.png"
+          alt="" />&nbsp;&nbsp;<img src="7.png" alt="" />&nbsp;&nbsp;
+        <img src="8.png" alt="" />&nbsp;&nbsp;<img
+          src="9.png"
+          alt="" />&nbsp;&nbsp;<img src="10.png" alt=""
+      /></marquee>
+      <marquee behavior="" direction="left"
+        >&nbsp;&nbsp;<img src="1.jpeg" />&nbsp;&nbsp;<img
+          src="2.jpeg"
+          alt="" />&nbsp;&nbsp;<img src="3.jpeg" alt="" />&nbsp;&nbsp;<img
+          src="4.png"
+          alt="" />&nbsp;&nbsp;<img src="5.png" alt="" />&nbsp;&nbsp;<img
+          src="6.png"
+          alt="" />&nbsp;&nbsp;<img src="7.png" alt="" /> &nbsp;&nbsp;<img
+          src="8.png"
+          alt="" />&nbsp;&nbsp;<img src="9.png" alt="" />&nbsp;&nbsp;<img
+          src="10.png"
+          alt=""
+      /></marquee>
+    </div>
+
+    <div class="recognized">
+      <h1>Recognized by International Bodies & Govt. Of India</h1>
+      <img src="iso-logo1.webp" alt="" />
+      <img src="iso-logo2.webp" alt="" />
+      <img src="government-logo.webp" />
+      <img src="startup-logo.webp" alt="" />
+    </div>
+
+    <div class="whychoosetop">
+      <h1>Why Choose Tap Academy???</h1>
+      <div class="whychoose">
+        <div class="left">
+          <img src="learning.d9d1d14b.svg" alt="" />
+          <h1>Flexible Learning Options</h1>
+          <h5>
+            Choose between online or classroom training based on your
+            convenience
+          </h5>
+        </div>
+        &nbsp;
+        <div class="middle">
+          <img src="job.7a2dc1b7.svg" alt="" />
+          <h1>Unlimited Job Opportunities</h1>
+          <h5>Get unlimited placement opportunities till you get placed</h5>
+        </div>
+        &nbsp;
+        <div class="right">
+          <img src="hands-on.8f5bad5c.svg" alt="" />
+          <h1>Hands-on Experience</h1>
+          <h5>Gain practical skills through real-world projects</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="ourcp">
+      <h1>Our Career Programs</h1>
+      <h4>
+        Explore our courses designed by experts which offer students support,
+        career counselling and certification
+      </h4>
+      <div class="insideourcp">
+        <div class="left">
+          <img src="course-image1.webp" alt="" />
+          <h1>Full Stack Web Development (JAVA)</h1>
+          <p>
+            Dive into our Java Full Stack Web Development course at TAP Academy,
+            where you'll master Java programming alongside front-end and
+            back-end frameworks, preparing you for a career in dynamic web
+            development.
+          </p>
+          <ul>
+            <li>Best-In-Class Training</li>
+            <li>24/7 LMS Access</li>
+            <li>24/7 Support</li>
+            <li>
+              Learn Java fundamentals alongside HTML, CSS, and JavaScript
+              basics.
+            </li>
+            <li>Master OOP concepts and the Collections Framework</li>
+            <li>Explore advanced Java, Spring, Hibernate, JDBC, and JEE.</li>
+            <li>
+              Apply your knowledge and skills by working on live projects.
+            </li>
+          </ul>
+
+          <button class="btn1"><a href="">Download Brochure</a></button>
+          <button class="btn2"><a href="">Learn More->></a></button>
+        </div>
+        <div class="right">
+          <img src="course-image2.webp" alt="" />
+          <h1>Apply your knowledge and skills by working on live projects.</h1>
+          <p>
+            The Data Structures and Algorithms (DSA) course is a comprehensive
+            program designed to build a solid foundation in computational
+            problem-solving. With all classes delivered through cutting-edge AR
+            technology, you'll enjoy an interactive and engaging learning
+            experience that bridges theory with real-world application.
+          </p>
+          <ul>
+            <li>Best-In-Class Training</li>
+            <li>AR Based learning</li>
+            <li>24/7 Support</li>
+            <li>Explore bit manipulation, recursion, arrays, and matrices.</li>
+            <li>
+              Learn linked lists (singly, doubly, and circular), stacks, and
+              queues.
+            </li>
+            <li>Delve into tree data structures and dynamic programming.</li>
+            <li>Experience all classes through immersive AR technology.</li>
+          </ul>
+
+          <button class="btn1"><a href="">Download Brochure</a></button>
+          <button class="btn2"><a href="">Learn More->></a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="placedstudents">
+      <h1>Recently Placed Students</h1>
+      <p>
+        Showcasing our recent alumni who have secured positions in top
+        companies, reflecting their achievements and the effectiveness of our
+        training
+      </p>
+      <div class="insideplacedstudents">
+        <div class="left">
+          <img src="aman-kumar.webp" alt="" height="300px" width="250px" />
+          <p>
+            Aman Kumar <br />
+            Project Intern( Cybersecurity) <br />
+            <img
+              src="rapyuta-robotics.webp"
+              height="50px"
+              width="90px"
+              alt=""
+            />
+            <br />8 LPA
+          </p>
+        </div>
+
+        <div class="middle">
+          <img src="veera.webp" alt="" height="300px" width="250px" />
+          <p>
+            Veera Karthik <br />Janga Full Stack Developer <br />
+            <img src="raja-softwares.webp" height="50px" width="90px" alt="" />
+            <br />7 LPA
+          </p>
+        </div>
+
+        <div class="right">
+          <img src="eduru-teja.webp" alt="" height="300px" width="250px" />
+          <p>
+            Eduru Teja <br />QA Analyst <br />
+            <img src="ribbon.webp" alt="" />
+            <br />6 LPA
+          </p>
+        </div>
+
+        <div>
+          <img src="yogalakshmi.webp" alt="" />
+          <p>
+            Yogalakshmi <br />Programmer Specialist <br />
+            <img src="infosys.webp" alt="" height="50px" width="90px" />
+            <br />9.5 LPA
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--<div>
+        <center>
+            <h1>Career Growth Stories</h1>
+        <h3>Tap Academy provides unlimited job opportunities, ensuring every student has access to a<br> broad range of career paths. With AR Tech Training that has empowered over 11,000+ <br>students,we support your journey to professional success   </h3>
+        </center>
+    </div> -->
+
+    <footer>
+      <div class="foot">
+        <div class="left">
+          <img class="logo" src="company-logo.1ee5784c.svg" alt="" />
+          <p>A Unit of Tap Ed Tech Private Limited</p>
+        </div>
+
+        <div class="middle">
+          <ul>
+            <h3>Useful Links:</h3>
+            <li><a href="">Home</a></li>
+            <li><a href="">Student Reviews</a></li>
+            <li><a href="">Hire From Us</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <ul>
+            <h3>Courses Lists:</h3>
+            <li><a href="">Full Stack Web Development (JAVA)</a></li>
+            <li><a href="">Data Structures and Algorithms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+      <div class="underfoot">
+        <div class="left">
+          <p>�� 2024 Tap Academy. All rights reserved.</p>
+        </div>
+        <div class="right">
+          <a href="">Privacy Policy &nbsp;&nbsp;</a>
+          <a href="">Terms & Conditions&nbsp;&nbsp;</a>
+          <a href="">Refunds / Cancellations&nbsp;&nbsp;</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Registration-Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #3498db;
+            font-family: "Montserrat", sans-serif;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        fieldset{
+            background-color: #fff;
+            padding:15px;
+            width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        legend{
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 5px;
+            color: #333;
+            text-align: center;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 2px;
+        }
+        .stu{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .stu input{
+            width: 100%;
+            padding: 10px;
+            height: 35px;
+            border: 1px solid#ccc;
+            border-radius: 5px;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        .stu label{
+            font-size: 16px;
+            font-weight: bolder;
+        }
+        .dept{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .dept input{
+            width: 18px;
+            height: 15px;
+        }
+        .dept label{
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .yog input{
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        .msg input{
+        width: 100%;
+        height: 80px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        }
+
+        button{
+        width: 100px;
+        height: 30px;
+        margin-left:150px ;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 19px;
+        }
+        button:hover{
+            background-color: #3e8e41;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <div class="stu">
+                <legend>Enter Your Deatils</legend>
+            <label for="fname">FirstName</label><br><br>
+            <input type="text" required id="fname" placeholder="name" pattern="[a-zA-Z]{3,8}"><br><br>
+            <label for="lname">LastName</label><br><br>
+            <input type="text" required id="lname" placeholder="xys" pattern="[a-zA-Z]{1,8}"><br><br>
+            <label for="email">E-mail</label><br><br>
+            <input type="email" required id="email" placeholder="example@gmail.com" pattern="[a-z0-9_.]+@[a-z]+.[a-z]{2,}"><br><br>
+            <label for="phone">Phone</label><br><br>
+            <input type="tel" required id="phone" placeholder="+91" pattern="[6-9]{1}[0-9]{9}"><br><br>
+            </div>
+
+            
+            <div class="dept">
+                <label for="dept">Department:</label><br><br>
+            <input type="radio" required id="cse" name="dept">
+            <label for="cse">CSE</label>
+            <input type="radio" required id="ece" name="dept">
+            <label for="ece">ECE</label>
+            <input type="radio" required id="eee" name="dept">
+            <label for="eee">EEE</label>
+            <input type="radio" required id="mech" name="dept">
+            <label for="mech">MECH</label>
+            <input type="radio" required id="civ" name="dept">
+            <label for="civ">CIV</label><br><br>
+            </div>
+
+            <div class="yog">
+            <label for="yog">Year-of-Graduation:</label><br><br>
+            <input list="yog" placeholder="2024">
+            <datalist id="yog">
+                <option value="2020">2020</option> 
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>   
+          </datalist><br><br></div>
+
+          <div class="msg">
+          <label for="msg">Message:</label><br><br>
+          <input type="text" placeholder="input your message"><br><br></div>
+
+          <button>Submit</button>
+
+        </fieldset>
+    </form>
+
+        
+</body>
+</html>
